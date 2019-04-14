@@ -1,0 +1,11 @@
+{
+  "name": "something-useful-with-javascript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:koukimetal/something-useful-with-javascript.git",
+  "author": "comcometal <example@example.com>",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^1.14.0"
+  }
+}
