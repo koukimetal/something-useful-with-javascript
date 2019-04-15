@@ -13,8 +13,9 @@ const writeFileAsync = util.promisify(fs.writeFile);
             data.push(obj);
             await writeFileAsync('data.json', JSON.stringify(data), 'utf8'); 
         }
-        await append();
-        await append();
+        for (let i = 0; i < 3; i++) {
+            await append();
+        }
     } catch (e) {
         console.error(e);
     }
