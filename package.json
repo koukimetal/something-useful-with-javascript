@@ -5,7 +5,17 @@
   "repository": "git@github.com:koukimetal/something-useful-with-javascript.git",
   "author": "comcometal <example@example.com>",
   "license": "MIT",
+  "scripts": {
+    "lint": "eslint src",
+    "lint:fix": "eslint --fix src"
+  },
   "dependencies": {
     "puppeteer": "^1.14.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "prettier": "^1.17.0"
   }
 }

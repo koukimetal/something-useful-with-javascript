@@ -1,20 +1,22 @@
-const fs = require('fs');
+const fs = require("fs");
 
-const obj = {a: 1};
+const obj = { a: 1 };
 
-const readFileAsync = (filename) => {
+const readFileAsync = filename => {
     return new Promise((resolve, reject) => {
-        fs.readFile(filename, 'utf8', (err, text) => {
+        fs.readFile(filename, "utf8", (err, text) => {
             if (err) {
                 reject(err);
             }
             resolve(text);
         });
     });
-}
+};
 
-readFileAsync('data.json').then((text) => {
-    const data = JSON.parse(text);
-    data.push(obj);
-    fs.writeFile ("data.json", JSON.stringify(data), 'utf8');
-}).catch(err => console.error(err));
+readFileAsync("data.json")
+    .then(text => {
+        const data = JSON.parse(text);
+        data.push(obj);
+        fs.writeFile("data.json", JSON.stringify(data), "utf8");
+    })
+    .catch(err => console.error(err));
